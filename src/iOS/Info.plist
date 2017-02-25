@@ -50,15 +50,11 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>请允许使用摄像头</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>请打开蓝牙以便连接打印机</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-central</string>
-	</array>
 	<key>CFBundleName</key>
 	<string>Hybird Sample</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.mirage.hybird_sample</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please allow access of your photo library</string>
 </dict>
 </plist>
