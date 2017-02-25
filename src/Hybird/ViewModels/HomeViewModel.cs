@@ -28,19 +28,16 @@ namespace Hybird.ViewModels
 				Statics.ShowHUD("正在刷新");
 			}
 			IsBusy = true;
-			using (var client = new HttpClient())
+			var html = await Task.Run(() => ResourceLoader.Load("hybrid_test.html"));
+			WebView.LoadContent(html);
+			if (delay)
 			{
-				var html = await Task.Run(() => ResourceLoader.Load("hybrid_test.html"));
-				WebView.LoadContent(html);
-				if (delay)
-				{
-					await Task.Delay(TimeSpan.FromSeconds(1));
-				}
-				IsBusy = false;
-				if (showHud)
-				{
-					Statics.ShowSuccessHUDWithStatus("刷新完成");
-				}
+				await Task.Delay(TimeSpan.FromSeconds(1));
+			}
+			IsBusy = false;
+			if (showHud)
+			{
+				Statics.ShowSuccessHUDWithStatus("刷新完成");
 			}
 		}
 	}

@@ -149,22 +149,22 @@ namespace Hybird.Views
 				try
 				{
 					await UploadStream(url, stream, formName, fileName);
+					SetSuccessJsToNativeCallResult(callId, "Successfully uploaded photo");
 					Device.BeginInvokeOnMainThread(() =>
 					{
 						ShowSuccessHUDWithStatus("Upload photo successfully");
 					});
-					SetSuccessJsToNativeCallResult(callId, "Successfully uploaded photo");
 				}
 				catch (Exception ex)
 				{
-					Device.BeginInvokeOnMainThread(() =>
-					{
-						ShowErrorHUDWithStatus("Upload photo failed, please check connectivity and retry");
-					});
 					ex = ex.InnerException ?? ex;
 					var message = $"Unable to upload file {photo.Path} to {url}, error: {ex}";
 					Console.Error.WriteLine(message);
 					SetErrorJsToNativeCallResult(callId, message);
+					Device.BeginInvokeOnMainThread(() =>
+					{
+						ShowErrorHUDWithStatus("Upload photo failed, please check connectivity and retry");
+					});
 				}
 			});
 		}
