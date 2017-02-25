@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<views:BasePage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:views="clr-namespace:Hybird.Views"
+    xmlns:controls="clr-namespace:Hybird.Controls"
+	xmlns:imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+	x:Class="Hybird.Views.MenuPage">
+     <ContentPage.Content>
+         <ListView
+				SeparatorVisibility="None"
+                HasUnevenRows="True"
+                x:Name="menuListView">
+                <ListView.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="5"/>
+                        </Grid.RowDefinitions>
+
+                        <BoxView Grid.RowSpan="4"
+                                 BackgroundColor="{StaticResource HybirdBlue}"/>
+                        <imagecircle:CircleImage
+                            Grid.Row="1"
+							BorderColor="White"
+							BorderThickness="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            Source="hybird120.png"
+                            WidthRequest="75" HeightRequest="75" />
+                        <Label 
+							HorizontalOptions="Center"
+                            Grid.Row="2"
+                            Text="Hybird Sample"
+                            Style="{DynamicResource SubtitleStyle}" />
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <controls:MyViewCell>
+                            <Grid Padding="20">
+								<Grid.Triggers>
+									<DataTrigger TargetType="Grid"
+							                     Binding="{Binding IsSelected}"
+							                     Value="True">
+							            <Setter Property="BackgroundColor" Value="{StaticResource HybirdGreen}" />
+							        </DataTrigger>
+								</Grid.Triggers>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Icon}" HeightRequest="25" WidthRequest="25"/>
+                                <Label Grid.Column="1" Text="{Binding Title}" FontSize="24"/>
+                            </Grid>
+                        </controls:MyViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+    </ContentPage.Content>
+</views:BasePage>

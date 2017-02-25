@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Hybird.Views.AboutPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:controls="clr-namespace:Hybird.Controls"
+             Title="About Hybird Sample">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
+                     Padding="10"
+                     Spacing="10"
+                     VerticalOptions="FillAndExpand">
+            <Label Margin="0,10,0,0"
+                   LineBreakMode="WordWrap"
+                   Text="This is a sample to demonstrate how to use HybridWebView to build a hybrid mobile app in Xamarin Forms" />
+            <controls:MaterialButton x:Name="contactAuthorButton"
+                    Margin="0,10,0,0"
+                    BackgroundColor="{StaticResource HybirdGreen}"
+                    Clicked="ContactAuthor"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    Image="email.png"
+					TextColor="White"
+                    Text="Contact Us">
+				<Button.WidthRequest>
+					<OnPlatform x:TypeArguments="x:Double" iOS="120" Android="180" />
+				</Button.WidthRequest>
+				<Button.HeightRequest>
+					<OnPlatform x:TypeArguments="x:Double" iOS="40" Android="60" />
+				</Button.HeightRequest>
+			</controls:MaterialButton>
+			<Label Text="© Mirage Org 2016" Margin="0, 20, 0, 0" HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

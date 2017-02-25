@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Hybird.App"
+		xmlns:converters="clr-namespace:Hybird.Converters">
+	<Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="HybirdGreen">#006650</Color>
+			<Color x:Key="SeparatorColor">#DDDDDD</Color>
+			<Color x:Key="HybirdBlue">#03A9F4</Color>
+			<Color x:Key="HybirdHighlight">#04B9FF</Color>
+			<Color x:Key="HybirdGray">#B0B0B0</Color>
+			<converters:InverseBooleanConverter x:Key="inverseBooleanConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

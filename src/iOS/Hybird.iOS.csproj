@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{6EAEAA84-E317-4BB5-BFCA-B90ED9635D26}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Laundry.iOS</RootNamespace>
+    <AssemblyName>Laundry.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IOSDebuggerPort>37215</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: imgen@hotmail.com (SL7N6654K6)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>766078c3-6aa0-45e4-a591-cdf1afaaf39c</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="MaterialControls">
+      <HintPath>..\packages\MaterialControls.1.2.2\lib\Xamarin.iOS10\MaterialControls.dll</HintPath>
+    </Reference>
+    <Reference Include="FolderPath.Abstractions">
+      <HintPath>..\packages\FolderPath.1.1.0\lib\Xamarin.iOS\FolderPath.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="FolderPath">
+      <HintPath>..\packages\FolderPath.1.1.0\lib\Xamarin.iOS\FolderPath.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLSpecialFolder.Abstractions">
+      <HintPath>..\packages\PCLSpecialFolder.1.1.0\lib\Xamarin.iOS\PCLSpecialFolder.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLSpecialFolder">
+      <HintPath>..\packages\PCLSpecialFolder.1.1.0\lib\Xamarin.iOS\PCLSpecialFolder.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\Xamarin.iOS10\Plugin.Messaging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging">
+      <HintPath>..\packages\Xam.Plugins.Messaging.3.2.1\lib\Xamarin.iOS10\Plugin.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\Xamarin.iOS10\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\Xamarin.iOS10\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\Xamarin.iOS10\ZXingNetMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Forms">
+      <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.1.47\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Forms.iOS">
+      <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.1.47\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="ExifLib">
+      <HintPath>..\packages\ExifLib.PCL.1.0.2-pre01\lib\netstandard1.0\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Guards">
+      <HintPath>..\packages\Guards.1.0.14\lib\xamarin.ios10\Guards.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Tracing">
+      <HintPath>..\packages\Tracing.1.0.3-pre3\lib\xamarin.ios10\Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1.8-beta\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1.8-beta\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Core">
+      <HintPath>..\packages\XLabs.Core.2.3.0-pre05\lib\netstandard1.0\XLabs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.IOC">
+      <HintPath>..\packages\XLabs.IoC.2.3.0-pre05\lib\netstandard1.0\XLabs.IOC.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Serialization">
+      <HintPath>..\packages\XLabs.Serialization.2.3.0-pre05\lib\NETStandard1.0\XLabs.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Platform">
+      <HintPath>..\packages\XLabs.Platform.2.3.0-pre05\lib\xamarinios10\XLabs.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Platform.iOS">
+      <HintPath>..\packages\XLabs.Platform.2.3.0-pre05\lib\xamarinios10\XLabs.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Forms">
+      <HintPath>..\packages\XLabs.Forms.2.3.0-pre05\lib\xamarinios10\XLabs.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Forms.iOS">
+      <HintPath>..\packages\XLabs.Forms.2.3.0-pre05\lib\xamarinios10\XLabs.Forms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Serialization.Json.NET">
+      <HintPath>..\packages\XLabs.Serialization.JSON.2.3.0-pre05\lib\netstandard1.0\XLabs.Serialization.Json.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.XamForms.PullToRefresh">
+      <HintPath>..\packages\Refractored.XamForms.PullToRefresh.1.1.0\lib\Xamarin.iOS10\Refractored.XamForms.PullToRefresh.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.XamForms.PullToRefresh.iOS">
+      <HintPath>..\packages\Refractored.XamForms.PullToRefresh.1.1.0\lib\Xamarin.iOS10\Refractored.XamForms.PullToRefresh.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.2-beta2\lib\netstandard1.1\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.2.6.2\lib\Xamarin.iOS10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.2.6.2\lib\Xamarin.iOS10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Renderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\MyViewCellRenderer.cs" />
+    <Compile Include="Renderers\MaterialButtonRenderer.cs" />
+    <Compile Include="Renderers\Registrar.cs" />
+    <Compile Include="ViewExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BTProgressHUD\BTProgressHUD.csproj">
+      <Project>{8ECDFDC5-42D0-4540-9691-830EEB2ED874}</Project>
+      <Name>BTProgressHUD</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <ITunesArtwork Include="iTunesArtwork" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\hybird120.png" />
+    <BundleResource Include="Resources\share.png" />
+    <BundleResource Include="Resources\share%402x.png" />
+    <BundleResource Include="Resources\slideout.png" />
+    <BundleResource Include="Resources\slideout%402x.png" />
+    <BundleResource Include="Resources\splash.png" />
+    <BundleResource Include="Resources\email.png" />
+    <BundleResource Include="Resources\refresh%402x.png" />
+    <BundleResource Include="Resources\refresh.png" />
+  </ItemGroup>
+  <Import Project="..\Hybird\Hybird.projitems" Label="Shared" Condition="Exists('..\Hybird\Hybird.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

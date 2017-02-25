@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{A7448097-627E-4F1F-A9D6-63BAEE743293}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Laundry</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)hybrid_test.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BasePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RootPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MyViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HybirdNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SnackBarUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\InverseBooleanConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MessagingService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HybridWebViewPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HomePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Hybrid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ResourceLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ExtendedToolbarItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
+  </ItemGroup>
+</Project>
