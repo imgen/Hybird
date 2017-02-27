@@ -122,7 +122,7 @@ function setSuccessJsToNativeCallResult(callId: number, data: any = null) {
 
 function setErrorJsToNativeCallResult(callId: number, message: string, code: number = null, data: Hybrid.ErrorData = null) {
     Hybrid.setJsToNativeCallResult(callId, {
-        status: "success",
+        status: "error",
         message: message,
         data: data,
         code: code
@@ -131,7 +131,7 @@ function setErrorJsToNativeCallResult(callId: number, message: string, code: num
 
 function setFailJsToNativeCallResult(callId: number, data: Hybrid.ErrorData) {
     Hybrid.setJsToNativeCallResult(callId, {
-        status: "success",
+        status: "fail",
         data: data
     });
 }
