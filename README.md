@@ -9,4 +9,6 @@ On *Xamarin* side, it defines a bunch of commands which is available for *WebVie
 
 Each invocation is async, meaning the result will be returned some point in the future and you can supply a callback to handle the result if any. 
 
+Currently I implemented "UploadPhoto" and "ScanQRCode" commands to demonstrate the usage of the frameork.
+
 For more information, please see the source code.
