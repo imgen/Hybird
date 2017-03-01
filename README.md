@@ -1,7 +1,7 @@
 # Hybird
 A cross platform hybrid framework for mobile app using *Xamarin Forms* that allows async JS/Native interaction.
 
-It's not a standalone library, but instead a sample of how to do hybrid app in *Xamarin Forms*, thus cross platform.
+It's not a standalone library, but instead a sample of how to do hybrid app in *Xamarin Forms*, thus cross platform. To use it, you need to extract the code files (about 3 files, `hybrid.js`, `HybridWebViewPage.cs` and `Hybrid.cs`) and adapt them to your needs.
 
 The framework consists two components, a js file named `hybrid.js` which is responsible for interaction between *Xamarin* and `WebView`, and the *Xamarin* counterpart `HybridWebViewPage.cs` and `Hybrid.cs`. You should modify these two files to adapt to your requirements.
 
